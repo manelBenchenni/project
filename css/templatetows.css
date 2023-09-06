@@ -1,0 +1,231 @@
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: "Work Sans",sans-serif;
+}
+.container
+{
+   
+   
+    
+     padding-left: 60px;
+    padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*small*/
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/*meduim*/
+@media (min-width:992px){
+    .container{
+        width: 970px;
+        
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* start header  */
+/* body{
+    background-color: black;
+} */
+
+header{
+     background-color: black;
+     box-shadow: 0 0 10px rgb(214, 213, 213);
+     margin: 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+header .container h3{
+    color: white;
+    font-size: 25px;
+    letter-spacing: -3px;
+}
+header .container span{
+    color: orange;
+
+}
+header .container ul{
+    display: flex;
+    gap: 15px;
+}
+header .container ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+header .container ul li a:hover{
+    color: orange;
+}
+.manel{
+    color: white;
+  position: relative;
+  top: 30px;
+  display: none;
+}
+@media (max-width:665px) {
+    header .container ul{
+        position: absolute;
+        right: 0;
+        top: 65px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        padding-top: 20px;
+       
+         height: 0; 
+         transition: .3s; 
+        
+         
+
+    }
+    header .container ul li {
+        padding-bottom: 10px;
+         opacity: 0; 
+         transition: 1s;
+    }
+    header .container .manel{
+        display: block;
+        font-size: 20px;
+        top: 0px;
+
+    }
+
+    
+}
+.ulclass.active{
+    
+    height: 250px; 
+    z-index: 3;
+
+}
+.liClass.activ{
+    opacity: 1;
+} 
+/* end header  */
+.landin{
+    background-image: url(../img/templatetwo.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 220px);
+    position: relative;
+    top: -19px;
+    
+}
+.landing{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: calc(100vh - 220px);
+    position: relative;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.landing .content{
+    position: relative;
+    bottom: 50px;
+}
+.landing h3{
+    color: white;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+.landing h3 span{
+    color: orange;
+}
+.landing p{
+    color: rgb(206, 199, 199);
+}
+.sign{
+    background-color: orange;
+    border: none;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.creat{
+    background-color: transparent;
+    border: 2px orange solid;
+    padding: 5px 3px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.angle{
+    font-size: 25px;
+    color: orange;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(50%);
+    animation: down-up 2s infinite ;
+    cursor: pointer;
+}
+@keyframes down-up {
+    0%,20%,50%,80%,100%{
+        transform: translateY(0);
+    }
+    40%,60%{
+        transform: translateY(10px);
+    }
+}
+@media (max-width:761px) {
+    .landing h3{
+        font-size: 28px;
+        text-align: center;
+        margin-left: 5px;
+    }
+    .landing p{
+        max-width: 550px;
+        text-align: center;
+        margin-left: 10px;
+        font-size: 12px;
+
+    }
+    .landin .content{
+        bottom: 0;
+    }
+    .sign{
+        
+        padding: 4px 7px;
+        font-size: 14px;
+        
+    }
+    .creat{
+        border: 1px solid orange;
+        padding: 3px 3px;
+        font-size: 14px;
+        
+    } 
+    
+}
